@@ -1,11 +1,123 @@
-<html>
-   <body>
-      <h1>My Messaging Test Site 3</h1>
-      <nav>
-         <ul>
-            <li> <a href="hello.html">Hello World</a> </li>
-            <li> <a href="Webmessaging.html">Webmessaging</a> </li>
-        </ul>
-      </nav>
-   </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys 기능 테스트 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .feature-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .feature-list li:hover {
+            background-color: #d1d9e0;
+        }
+        .feature-list a {
+            text-decoration: none;
+            color: #007bff; /* Genesys 브랜드 색상 중 하나로 연출 */
+            font-weight: bold;
+            display: block; /* 링크 전체 영역 클릭 가능하도록 */
+        }
+        .feature-list a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-image">
+            <img src="https://api-cdn.usw2.pure.cloud/response-assets/v2/uploads/38beafed-b583-463c-b818-a1fce29d895c/f3841fec-3bca-4c04-8278-42abed8ad3ff.75f0e86e-7c26-4e97-8f3c-225572ad1f99.jpg" alt="Genesys 상징 이미지" >
+            <p style="text-align: left;"> 🚀 담당자 : 엄태연</p>
+            <p style="text-align: left;"> 🚀 이메일 : taeyun.eom@genesys.com</p>
+            <p style="text-align: left;"> 🚀 OrgName : teomdev</p>
+            <p style="text-align: left;"> 🚀 Region : us-west-2</p>
+            <p style="text-align: left;"> 🚀 Test Number : +1 220 213 1004</p>
+            <p style="text-align: left;"> 🚀 Test SMS Number : +1 775 980 0009</p>
+        </div>
+
+        <h1>🔍 기능 테스트 목록</h1>
+
+        <div class="feature-list">
+            <ul>
+                <li><a href="feature1.html">기능 1: Web Message - 페이지입력값 inputValue --> customAttributes </a></li>
+                <li><a href="feature2.html">기능 2: Knowledge Articles - 정보들을 홈페이지에서 검색할 수 있다.</a></li>
+                <li><a href="feature3.html">기능 3: Copilot - 봇을 활용한 Resource Center 질문에 대한 응대</a></li>
+                <li><a href="feature4.html">기능 4: Agentic AI(AI Studio and AI Guides)</a></li>
+                <li><a href="feature5.html">기능 5: Embedded Framework Test(기능정의완료_연동하는부분개발중)</a></li>  
+                <li><a href="feature6.html">기능 6: Salesforce campaign(개발중)</a></li>
+                <li><a href="feature7.html">기능 7: Agentless SMS(DataAction완료_백엔드(Node.js)가 필요한데 귀찮아 다른방법 찾는중)</a></li>
+                <li><a href="feature8.html">기능 8: Web Message - Timeslot Test</a></li>
+                <li><a href="https://help.mypurecloud.com/" target="_blank">Genesys Cloud Resource Center (새 탭 열림)</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="multi-open-section">
+            <h2>💡 업무 링크 한 번에 열기</h2>
+            <button onclick="openMultipleUrls()">선택된 홈페이지 모두 열기</button>
+            <div class="note">
+                <p>※ 즐겨사용하는 업무 사이트는 한번에 열자.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function openMultipleUrls() {
+            // **여기에 새 탭으로 열고 싶은 홈페이지 주소들을 추가하거나 변경하세요.**
+            // 각 URL은 정확한 웹사이트 주소여야 합니다.
+            const urlsToOpen = [
+                "https://outlook.office.com/mail/",
+                "https://genesys.okta.com/",
+                "https://genesys-cloud.okta.com/"
+            ];
+
+            urlsToOpen.forEach(url => {
+                // 각 URL을 새 탭으로 엽니다.
+                // 보안을 위해 'noopener,noreferrer'를 추가하는 것이 좋습니다.
+                window.open(url, '_blank', 'noopener,noreferrer');
+            });
+        }
+    </script>
+    
+</body>
 </html>

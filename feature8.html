@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeslot</title>
+</head>
+<body>
+    <div id="genesys-support-center"></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <h1>New Time Slot</h1>
+
+    <li><a href="https://help.mypurecloud.com/articles/use-custom-timeslot-slot-types-in-a-bot-flow/" target="_blank"> 디지털봇플로우 신규 슬롯 : New Time Slot </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/GCP/pages/373690364/Charter+-+PURE-6283+-+Messenger+-+Timeslot+picker+option+is+available+in+Bot+flows+making+scheduling+easier" target="_blank"> Messenger - Timeslot picker option is available in Bot flows making scheduling easier </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/RP/pages/533620224/How+to+Set+up+Appointment+Scheduling+in+a+Digital+Bot+Flow+using+Timepickers" target="_blank"> How to Set up Appointment Scheduling in a Digital Bot Flow using Timepickers </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/~5570580709a167a8ae4dd78ff48b1cf9bc9c33/pages/329515454/Thoughts+on+time+picking" target="_blank"> Thoughts on time picking </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/GCP/pages/690323483/Bughunt+for+PURE-6283+-+Timeslot+picker+option+is+available+in+Bot+flows+making+scheduling+easier" target="_blank"> Timeslot picker option is available in Bot flows making scheduling easier </a></li>    
+    
+    <script type="text/javascript" charset="utf-8">
+      (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+          (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+      })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+        environment: 'prod-usw2',
+        deploymentId: '7a6cdfe6-23fe-4c05-b93e-edf765b46226'
+      });
+
+      // Wait for Genesys to load, then set custom attributes
+      function setGenesysCustomAttributes() {
+        if (typeof Genesys === "function") {
+          Genesys("command", "Database.set", {
+            messaging: {
+              customAttributes: {
+                department: "Product Support",
+                PSG_skill: "API/Integration",
+                device: "mobile",
+                Cust_Issue: "SSO login",
+                name: "Christopher Nissen"
+              }
+            }
+          });
+        } else {
+          setTimeout(setGenesysCustomAttributes, 500);
+        }
+      }
+      setTimeout(setGenesysCustomAttributes, 1000);
+    </script>
+</body>
+</html>
