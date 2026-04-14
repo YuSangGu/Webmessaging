@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC_Web Messaging</title>
+</head>
+<body>
+    <div id="genesys-support-center"></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <h1>Genesys Cloud Resource Center - Web Message - 봇에서 리소스센터에 있는 내용 검색</h1>
+
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/TTTCSS/pages/347636077/Copilot+-+Basic+Setup+and+Usage" target="_blank"> Copilot - 기본 설정 및 사용 </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/purecloudCustomerCare/pages/555713650/Set+up+Agent+Copilot" target="_blank"> Agent Copilot 설정 </a></li>
+    <li><a href="https://genesys-confluence.atlassian.net/wiki/spaces/TTTCSS/pages/608735042/Agent+Copilot" target="_blank"> Agent Copilot </a></li>
+
+
+    
+    <script type="text/javascript" charset="utf-8">
+      (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+          (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+      })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+        environment: 'prod-usw2',
+        deploymentId: '44dbb750-bf30-458f-bcc3-8b4b2ef47aed'
+      });
+
+      // Wait for Genesys to load, then set custom attributes
+      function setGenesysCustomAttributes() {
+        if (typeof Genesys === "function") {
+          Genesys("command", "Database.set", {
+            messaging: {
+              customAttributes: {
+                department: "Product Support",
+                PSG_skill: "API/Integration",
+                device: "mobile",
+                Cust_Issue: "SSO login",
+                name: "Christopher Nissen"
+              }
+            }
+          });
+        } else {
+          setTimeout(setGenesysCustomAttributes, 500);
+        }
+      }
+      setTimeout(setGenesysCustomAttributes, 1000);
+    </script>
+</body>
+</html>
